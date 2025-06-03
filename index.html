@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rimsha Mahboob - IT Visionary</title>
-    <meta name="description" content="Rimsha Mahboob - Award-winning IT professional, data analytics specialist, and multilingual technology innovator.">
+    <title>Rimsha Mahboob - IT Professional</title>
+    <meta name="description" content="Rimsha Mahboob - Information Technology student and Records Operations Specialist with expertise in programming, data analytics, and STEM education.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --accent: #00f2fe;
-            --accent2: #4facfe;
-            --dark: #0a0a0a;
-            --surface: rgba(255, 255, 255, 0.08);
-            --border: rgba(255, 255, 255, 0.12);
-            --text: #ffffff;
-            --text-muted: #a0a9b8;
-            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --primary: #3b82f6;
+            --secondary: #1d4ed8;
+            --accent: #0891b2;
+            --accent2: #0284c7;
+            --light: #ffffff;
+            --surface: rgba(255, 255, 255, 0.95);
+            --surface-alt: rgba(248, 250, 252, 0.9);
+            --border: rgba(203, 213, 225, 0.4);
+            --text: #1f2937;
+            --text-muted: #6b7280;
+            --text-light: #9ca3af;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         * {
@@ -29,12 +32,13 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 50%, #16213e 100%);
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #f1f5f9 50%, #f8fafc 75%, #ffffff 100%);
             color: var(--text);
             overflow-x: hidden;
             scroll-behavior: smooth;
             line-height: 1.6;
+            min-height: 100vh;
         }
 
         /* Advanced Background */
@@ -58,10 +62,10 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            opacity: 0.1;
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.05));
+            opacity: 0.6;
             animation: float 20s ease-in-out infinite;
-            filter: blur(60px);
+            filter: blur(40px);
         }
 
         .orb:nth-child(1) { width: 400px; height: 400px; top: 10%; left: 10%; animation-delay: 0s; }
@@ -81,8 +85,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
             background-size: 60px 60px;
             animation: gridMove 30s linear infinite;
         }
@@ -97,11 +101,12 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-light);
         }
 
         .nav {
@@ -185,7 +190,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid var(--border);
+            border: 4px solid var(--light);
             box-shadow: var(--shadow);
             transition: all 0.4s ease;
             position: relative;
@@ -212,7 +217,7 @@
 
         .profile-image:hover img {
             transform: scale(1.05);
-            box-shadow: 0 25px 50px rgba(79, 172, 254, 0.3);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
         }
 
         /* About Section Profile */
@@ -933,22 +938,22 @@
             <div class="profile-image">
                 <img src="profile1.jpg" alt="Rimsha Mahboob - Professional Photo">
             </div>
-            <div class="hero-badge">✨ Award-Winning IT Professional</div>
+            <div class="hero-badge">✨ IT Professional & Student</div>
             <h1 class="hero-title">Rimsha Mahboob</h1>
-            <p class="hero-subtitle">Technology Visionary & Data Analytics Specialist</p>
+            <p class="hero-subtitle">Information Technology Student & Data Analytics Enthusiast</p>
             <p class="hero-description">
                 Transforming complex data into actionable insights while bridging cultures through multilingual expertise and innovative problem-solving in the evolving landscape of information technology.
             </p>
             
             <div class="achievements">
                 <div class="achievement">
-                    <div class="achievement-text">Outstanding Tutor of the Year</div>
+                    <div class="achievement-text">Outstanding Tutor</div>
                 </div>
                 <div class="achievement">
                     <div class="achievement-text">President's List</div>
                 </div>
                 <div class="achievement">
-                    <div class="achievement-text">Multilingual Expert</div>
+                    <div class="achievement-text">Multilingual Professional</div>
                 </div>
             </div>
             
