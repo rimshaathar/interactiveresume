@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rimsha Mahboob - IT Professional</title>
-    <meta name="description" content="Rimsha Mahboob - Information Technology student and Records Operations Specialist with expertise in programming, data analytics, and STEM education.">
+    <title>Rimsha Mahboob - IT Visionary</title>
+    <meta name="description" content="Rimsha Mahboob - Award-winning IT professional, data analytics specialist, and multilingual technology innovator.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #00f2fe;
+            --accent2: #4facfe;
+            --dark: #0a0a0a;
+            --surface: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.12);
+            --text: #ffffff;
+            --text-muted: #a0a9b8;
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,15 +29,16 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d2d5f 100%);
-            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 50%, #16213e 100%);
+            color: var(--text);
             overflow-x: hidden;
             scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
-        /* Animated background particles */
-        .bg-particles {
+        /* Advanced Background */
+        .bg-container {
             position: fixed;
             top: 0;
             left: 0;
@@ -29,20 +46,50 @@
             height: 100%;
             pointer-events: none;
             z-index: -1;
+            overflow: hidden;
         }
 
-        .particle {
+        .floating-orbs {
             position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(139, 92, 246, 0.6);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
+            width: 100%;
+            height: 100%;
         }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+            filter: blur(60px);
+        }
+
+        .orb:nth-child(1) { width: 400px; height: 400px; top: 10%; left: 10%; animation-delay: 0s; }
+        .orb:nth-child(2) { width: 300px; height: 300px; top: 60%; right: 10%; animation-delay: 7s; }
+        .orb:nth-child(3) { width: 200px; height: 200px; top: 30%; left: 70%; animation-delay: 14s; }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
-            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
         }
 
         /* Header */
@@ -50,9 +97,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 15, 35, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
             z-index: 1000;
             transition: all 0.3s ease;
         }
@@ -61,15 +108,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
-            max-width: 1200px;
+            padding: 1.5rem 5%;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -77,21 +124,16 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             list-style: none;
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #8b5cf6;
-            transform: translateY(-2px);
         }
 
         .nav-links a::after {
@@ -101,8 +143,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
             transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
         }
 
         .nav-links a:hover::after {
@@ -111,48 +157,61 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
             padding: 0 5%;
+            position: relative;
         }
 
         .hero-content {
-            max-width: 800px;
-            animation: fadeInUp 1s ease-out;
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--surface);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ffffff, #8b5cf6, #06b6d4);
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: glow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5)); }
-            to { filter: drop-shadow(0 0 30px rgba(6, 182, 212, 0.7)); }
+            animation: fadeInUp 1s ease 0.4s both;
+            line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: #a1a1aa;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--text-muted);
             margin-bottom: 2rem;
-            font-weight: 400;
+            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .hero-description {
-            font-size: 1.1rem;
-            color: #d4d4d8;
+            font-size: 1.2rem;
+            color: var(--text-muted);
             margin-bottom: 3rem;
-            line-height: 1.6;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.8s both;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .achievements {
@@ -161,136 +220,245 @@
             gap: 2rem;
             margin-bottom: 3rem;
             flex-wrap: wrap;
+            animation: fadeInUp 1s ease 1s both;
         }
 
         .achievement {
-            background: rgba(139, 92, 246, 0.1);
-            padding: 0.5rem 1rem;
+            background: var(--surface);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border);
+            padding: 1rem 2rem;
             border-radius: 25px;
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            font-size: 0.9rem;
-            color: #8b5cf6;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .achievement:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .achievement-text {
             font-weight: 600;
+            color: var(--accent);
+            position: relative;
+            z-index: 1;
+        }
+
+        .languages {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 1.2s both;
+        }
+
+        .language {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .language:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeInUp 1s ease 1.4s both;
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 1.2rem 3rem;
             border: none;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             cursor: pointer;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             position: relative;
             overflow: hidden;
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
             color: white;
+            box-shadow: 0 15px 35px rgba(79, 172, 254, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #8b5cf6;
-            border: 2px solid #8b5cf6;
+            color: var(--accent);
+            border: 2px solid var(--accent);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 25px 45px rgba(79, 172, 254, 0.4);
         }
 
         /* Sections */
         .section {
-            padding: 5rem 5%;
-            max-width: 1200px;
+            padding: 8rem 5%;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .section-header {
             text-align: center;
-            margin-bottom: 3rem;
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+            margin-bottom: 5rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--surface);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 5rem;
         }
 
         .skill-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 3rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-10px);
-            background: rgba(139, 92, 246, 0.1);
-            border-color: rgba(139, 92, 246, 0.5);
-            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+            box-shadow: var(--shadow);
+        }
+
+        .skill-card:hover::before {
+            opacity: 0.05;
         }
 
         .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 2rem;
             display: block;
+            position: relative;
+            z-index: 1;
         }
 
         .skill-title {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.8rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #ffffff;
+            color: var(--text);
+            position: relative;
+            z-index: 1;
         }
 
         .skill-description {
-            color: #a1a1aa;
-            line-height: 1.6;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            justify-content: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         .tech-tag {
-            background: rgba(6, 182, 212, 0.2);
-            color: #06b6d4;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            border: 1px solid rgba(6, 182, 212, 0.3);
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
-        /* Experience Timeline */
+        .tech-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+        }
+
+        /* Timeline */
         .timeline {
             position: relative;
-            margin: 3rem 0;
+            margin: 5rem 0;
         }
 
         .timeline::before {
@@ -299,180 +467,269 @@
             left: 50%;
             top: 0;
             bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, #8b5cf6, #06b6d4);
+            width: 4px;
+            background: linear-gradient(180deg, var(--accent2), var(--accent));
             transform: translateX(-50%);
+            border-radius: 2px;
         }
 
         .timeline-item {
             position: relative;
-            margin: 3rem 0;
+            margin: 4rem 0;
             display: flex;
             align-items: center;
         }
 
+        .timeline-content {
+            width: 45%;
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 3rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
         .timeline-item:nth-child(odd) .timeline-content {
             margin-right: auto;
-            margin-left: 0;
             text-align: right;
-            transform: translateX(-2rem);
         }
 
         .timeline-item:nth-child(even) .timeline-content {
             margin-left: auto;
-            margin-right: 0;
             text-align: left;
-            transform: translateX(2rem);
         }
 
-        .timeline-content {
-            width: 45%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: all 0.3s ease;
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .timeline-content:hover {
-            background: rgba(139, 92, 246, 0.1);
             transform: scale(1.05);
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-content:hover::before {
+            opacity: 0.05;
         }
 
         .timeline-dot {
             position: absolute;
             left: 50%;
-            width: 20px;
-            height: 20px;
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
             border-radius: 50%;
             transform: translateX(-50%);
             z-index: 2;
+            border: 4px solid var(--dark);
+            box-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
         }
 
         .job-title {
-            color: #8b5cf6;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
             margin-bottom: 0.5rem;
-            font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
 
         .company-date {
-            color: #06b6d4;
+            color: var(--text-muted);
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .job-description {
-            color: #d4d4d8;
-            line-height: 1.6;
+            color: var(--text-muted);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Education Section */
+        /* Education Cards */
         .education-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 5rem;
         }
 
         .education-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s ease;
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 3rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .education-card:hover {
-            transform: translateY(-5px);
-            background: rgba(139, 92, 246, 0.1);
-            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .education-card:hover::before {
+            opacity: 0.05;
         }
 
         .degree-title {
-            font-size: 1.4rem;
-            color: #8b5cf6;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         .school-name {
-            color: #06b6d4;
+            color: var(--text);
             font-weight: 600;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .graduation-date {
-            color: #a1a1aa;
-            margin-bottom: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Contact Section */
+        .education-details {
+            color: var(--text-muted);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .achievement-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Contact Grid */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
-            margin-top: 3rem;
+            margin-top: 5rem;
         }
 
         .contact-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 3rem;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .contact-card:hover {
-            transform: translateY(-5px);
-            background: rgba(139, 92, 246, 0.1);
-            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-card:hover::before {
+            opacity: 0.05;
         }
 
         .contact-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-title {
+            font-size: 1.3rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #8b5cf6;
+            color: var(--text);
+            position: relative;
+            z-index: 1;
         }
 
         .contact-link {
-            color: #d4d4d8;
+            color: var(--text-muted);
             text-decoration: none;
             transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-link:hover {
-            color: #06b6d4;
+            color: var(--accent);
         }
 
-        /* Languages Section */
-        .languages {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+        /* Scroll Progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 9999;
         }
 
-        .language {
-            background: rgba(6, 182, 212, 0.1);
-            color: #06b6d4;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            font-weight: 600;
+        .scroll-progress-bar {
+            height: 100%;
+            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            width: 0%;
+            transition: width 0.1s ease;
         }
 
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(60px);
             }
             to {
                 opacity: 1;
@@ -480,7 +737,7 @@
             }
         }
 
-        .fade-in {
+        .fade-in-up {
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
         }
@@ -496,66 +753,54 @@
             }
             
             .section {
-                padding: 3rem 1rem;
+                padding: 4rem 1rem;
             }
             
             .timeline::before {
-                left: 20px;
+                left: 30px;
             }
             
-            .timeline-item .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 60px;
-                text-align: left;
-                transform: none;
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+                text-align: left !important;
             }
             
             .timeline-dot {
-                left: 20px;
+                left: 30px;
+            }
+            
+            .achievements {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .languages {
+                justify-content: center;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-
-            .achievements {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .languages {
-                justify-content: center;
-            }
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: rgba(139, 92, 246, 0.2);
-            z-index: 1001;
-        }
-
-        .scroll-progress {
-            height: 100%;
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
-            width: 0%;
-            transition: width 0.1s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator">
-        <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     </div>
 
-    <!-- Background Particles -->
-    <div class="bg-particles" id="particles"></div>
+    <!-- Background -->
+    <div class="bg-container">
+        <div class="grid-bg"></div>
+        <div class="floating-orbs">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+        </div>
+    </div>
 
     <!-- Header -->
     <header class="header">
@@ -574,20 +819,24 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <div class="hero-badge">✨ Award-Winning IT Professional</div>
             <h1 class="hero-title">Rimsha Mahboob</h1>
-            <p class="hero-subtitle">Information Technology Professional</p>
+            <p class="hero-subtitle">Technology Visionary & Data Analytics Specialist</p>
+            <p class="hero-description">
+                Transforming complex data into actionable insights while bridging cultures through multilingual expertise and innovative problem-solving in the evolving landscape of information technology.
+            </p>
             
             <div class="achievements">
-                <div class="achievement">Outstanding Tutor of the Year</div>
-                <div class="achievement">President's List</div>
-                <div class="achievement">Multilingual</div>
+                <div class="achievement">
+                    <div class="achievement-text">Outstanding Tutor of the Year</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-text">President's List</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-text">Multilingual Expert</div>
+                </div>
             </div>
-            
-            <p class="hero-description">
-                Information Technology student with expertise in programming, data analytics, and STEM education. 
-                Currently pursuing a Bachelor's degree at Florida State University while working as a Records Operation Specialist. 
-                Passionate about technology, mentoring, and creating innovative solutions.
-            </p>
             
             <div class="languages">
                 <div class="language">English</div>
@@ -605,24 +854,29 @@
 
     <!-- About Section -->
     <section class="section" id="about">
-        <h2 class="section-title">About Me</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #d4d4d8; margin-bottom: 2rem;">
-                I am a dedicated Information Technology student at Florida State University with a passion for technology and education. 
-                My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and 
-                a commitment to helping others succeed.
+        <div class="section-header">
+            <div class="section-badge">Who I Am</div>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-description">
+                I am a dedicated Information Technology student at Florida State University with a passion for technology and education. My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and a commitment to helping others succeed.
             </p>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #d4d4d8;">
-                As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to 
-                collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing 
-                to grow in the field of data analytics and information systems.
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-muted);">
+                As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing to grow in the field of data analytics and information systems.
             </p>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section class="section" id="skills">
-        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-header">
+            <div class="section-badge">Expertise</div>
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-description">
+                A comprehensive toolkit spanning programming, data analysis, and system administration.
+            </p>
+        </div>
         <div class="skills-grid">
             <div class="skill-card">
                 <div class="skill-icon">💻</div>
@@ -670,7 +924,13 @@
 
     <!-- Experience Section -->
     <section class="section" id="experience">
-        <h2 class="section-title">Professional Experience</h2>
+        <div class="section-header">
+            <div class="section-badge">Career Journey</div>
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-description">
+                A diverse background spanning government operations, education, and technology mentoring.
+            </p>
+        </div>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
@@ -678,9 +938,7 @@
                     <h3 class="job-title">Records Operation Specialist</h3>
                     <p class="company-date">Florida Department of Highway Safety and Motor Vehicles • July 2024 - Current</p>
                     <p class="job-description">
-                        Manage high-volume title document processing and imaging operations with precise attention to detail. 
-                        Convert and organize physical documents to electronic format using scanning technology and Microsoft Office Suite. 
-                        Research and respond to title document requests using manual and automated systems while maintaining digital filing systems.
+                        Manage high-volume title document processing and imaging operations with precise attention to detail. Convert and organize physical documents to electronic format using scanning technology and Microsoft Office Suite. Research and respond to title document requests using manual and automated systems while maintaining digital filing systems.
                     </p>
                 </div>
             </div>
@@ -691,9 +949,7 @@
                     <h3 class="job-title">Cosmetology License</h3>
                     <p class="company-date">Aveda Institute Florida • February 2023 - January 2024</p>
                     <p class="job-description">
-                        Acquired hands-on experience in various cosmetology services and learned industry-standard practices and safety protocols. 
-                        Obtained cosmetology license, demonstrating proficiency and knowledge in professional beauty practices. 
-                        Completed comprehensive training in cosmetology, including hair, skin, and nail care techniques.
+                        Acquired hands-on experience in various cosmetology services and learned industry-standard practices and safety protocols. Obtained cosmetology license, demonstrating proficiency and knowledge in professional beauty practices. Completed comprehensive training in cosmetology, including hair, skin, and nail care techniques.
                     </p>
                 </div>
             </div>
@@ -704,9 +960,7 @@
                     <h3 class="job-title">College Mentor</h3>
                     <p class="company-date">Verizon Enterprise - Youth Program • May 2022 - August 2022</p>
                     <p class="job-description">
-                        Conducted coding workshops and hands-on activities to introduce middle school students to programming and STEM concepts. 
-                        Provided career guidance and academic planning support, helping students align their education with future technology careers. 
-                        Facilitated networking opportunities with industry professionals and offered personal development advice.
+                        Conducted coding workshops and hands-on activities to introduce middle school students to programming and STEM concepts. Provided career guidance and academic planning support, helping students align their education with future technology careers. Facilitated networking opportunities with industry professionals and offered personal development advice.
                     </p>
                 </div>
             </div>
@@ -717,9 +971,7 @@
                     <h3 class="job-title">STEM Tutor</h3>
                     <p class="company-date">Learning Commons - Tallahassee State College • January 2021 - May 2022</p>
                     <p class="job-description">
-                        Tutored students in Chemistry I & II, Calculus, College Algebra, and Physics through both in-person and online sessions. 
-                        Utilized digital tools such as GoBoard and Zoom to facilitate remote tutoring and enhance the learning experience. 
-                        Developed customized lesson plans and study materials to address individual student needs.
+                        Tutored students in Chemistry I & II, Calculus, College Algebra, and Physics through both in-person and online sessions. Utilized digital tools such as GoBoard and Zoom to facilitate remote tutoring and enhance the learning experience. Developed customized lesson plans and study materials to address individual student needs.
                     </p>
                 </div>
             </div>
@@ -728,75 +980,71 @@
 
     <!-- Education Section -->
     <section class="section" id="education">
-        <h2 class="section-title">Education</h2>
+        <div class="section-header">
+            <div class="section-badge">Academic Excellence</div>
+            <h2 class="section-title">Education</h2>
+            <p class="section-description">
+                Pursuing advanced knowledge in Information Technology and Data Analytics with academic distinction.
+            </p>
+        </div>
         <div class="education-grid">
             <div class="education-card">
                 <h3 class="degree-title">Bachelor of Science</h3>
                 <p class="school-name">Florida State University</p>
                 <p class="graduation-date">Expected: December 2025</p>
-                <p style="color: #d4d4d8; line-height: 1.6;">
+                <div class="education-details">
                     Major in Information Technology<br>
                     Minor in Data Analytics<br>
-                    <span style="color: #8b5cf6;">President's List Achievement</span>
-                </p>
+                    <span class="achievement-highlight">President's List Achievement</span>
+                </div>
             </div>
             
             <div class="education-card">
                 <h3 class="degree-title">Associates in Arts</h3>
                 <p class="school-name">Tallahassee State College</p>
                 <p class="graduation-date">December 2024</p>
-                <p style="color: #d4d4d8; line-height: 1.6;">
+                <div class="education-details">
                     Foundation in liberal arts and sciences<br>
-                    <span style="color: #8b5cf6;">Outstanding Tutor of the Year</span>
-                </p>
+                    <span class="achievement-highlight">Outstanding Tutor of the Year</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section" id="contact">
-        <h2 class="section-title">Let's Connect</h2>
+        <div class="section-header">
+            <div class="section-badge">Get In Touch</div>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-description">
+                Ready to collaborate on innovative projects and explore new opportunities in technology.
+            </p>
+        </div>
         <div class="contact-grid">
             <div class="contact-card">
                 <div class="contact-icon">📧</div>
-                <h3 style="margin-bottom: 1rem; color: #ffffff;">Email</h3>
-                <p><a href="mailto:rimsha.athar1@gmail.com" class="contact-link">rimsha.athar1@gmail.com</a></p>
+                <h3 class="contact-title">Email</h3>
+                <a href="mailto:rimsha.athar1@gmail.com" class="contact-link">rimsha.athar1@gmail.com</a>
             </div>
             
             <div class="contact-card">
                 <div class="contact-icon">📱</div>
-                <h3 style="margin-bottom: 1rem; color: #ffffff;">Phone</h3>
-                <p><a href="tel:+14482159715" class="contact-link">(448) 215-9715</a></p>
+                <h3 class="contact-title">Phone</h3>
+                <a href="tel:+14482159715" class="contact-link">(448) 215-9715</a>
             </div>
             
             <div class="contact-card">
                 <div class="contact-icon">📍</div>
-                <h3 style="margin-bottom: 1rem; color: #ffffff;">Location</h3>
-                <p class="contact-link">Tallahassee, FL</p>
+                <h3 class="contact-title">Location</h3>
+                <span class="contact-link">Tallahassee, FL</span>
             </div>
         </div>
     </section>
 
     <script>
-        // Create floating particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                container.appendChild(particle);
-            }
-        }
-
         // Scroll progress indicator
         function updateScrollProgress() {
-            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollProgress = document.getElementById('scrollProgressBar');
             const scrollTop = window.pageYOffset;
             const docHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercent = (scrollTop / docHeight) * 100;
@@ -812,7 +1060,7 @@
                     const targetId = link.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
                     if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 80;
+                        const offsetTop = targetElement.offsetTop - 100;
                         window.scrollTo({
                             top: offsetTop,
                             behavior: 'smooth'
@@ -822,41 +1070,116 @@
             });
         }
 
-        // Animate elements on scroll
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.skill-card, .timeline-item, .contact-card, .education-card');
+        // Intersection Observer for animations
+        function setupScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
+                        entry.target.classList.add('fade-in-up');
                     }
                 });
-            }, { threshold: 0.1 });
+            }, observerOptions);
 
-            elements.forEach(el => observer.observe(el));
+            // Observe elements for animation
+            const animateElements = document.querySelectorAll('.skill-card, .timeline-item, .education-card, .contact-card');
+            animateElements.forEach(el => observer.observe(el));
         }
 
-        // Header background on scroll
-        function setupHeaderScroll() {
+        // Header scroll effect
+        function setupHeaderEffect() {
             const header = document.querySelector('.header');
+            let lastScrollTop = 0;
+
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(15, 15, 35, 0.98)';
+                const scrollTop = window.pageYOffset;
+                
+                if (scrollTop > 100) {
+                    header.style.background = 'rgba(10, 10, 10, 0.98)';
+                    header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
                 } else {
-                    header.style.background = 'rgba(15, 15, 35, 0.95)';
+                    header.style.background = 'rgba(10, 10, 10, 0.95)';
+                    header.style.boxShadow = 'none';
                 }
+                
+                lastScrollTop = scrollTop;
             });
         }
 
-        // Initialize everything
+        // Enhanced button interactions
+        function setupButtonEffects() {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.transform = 'translateY(-3px) scale(1.02)';
+                });
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Parallax effect for floating orbs
+        function setupParallax() {
+            const orbs = document.querySelectorAll('.orb');
+            
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                
+                orbs.forEach((orb, index) => {
+                    const speed = (index + 1) * 0.3;
+                    orb.style.transform = `translate3d(0, ${rate * speed}px, 0)`;
+                });
+            });
+        }
+
+        // Enhanced hover effects for cards
+        function setupCardEffects() {
+            const cards = document.querySelectorAll('.skill-card, .education-card, .contact-card, .timeline-content');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    card.style.setProperty('--mouse-x', x + 'px');
+                    card.style.setProperty('--mouse-y', y + 'px');
+                });
+            });
+        }
+
+        // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
             setupSmoothScrolling();
-            animateOnScroll();
-            setupHeaderScroll();
+            setupScrollAnimations();
+            setupHeaderEffect();
+            setupButtonEffects();
+            setupParallax();
+            setupCardEffects();
         });
 
         // Update scroll progress on scroll
         window.addEventListener('scroll', updateScrollProgress);
 
-        // Add interactive hover effects to buttons
+        // Performance optimization: throttle scroll events
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    updateScrollProgress();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+    </script>
+</body>
+</html>
