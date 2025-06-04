@@ -5,26 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimsha Mahboob - IT Professional</title>
     <meta name="description" content="Rimsha Mahboob - Information Technology student and Records Operations Specialist with expertise in programming, data analytics, and STEM education.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #3b82f6;
-            --secondary: #1d4ed8;
-            --accent: #0891b2;
-            --accent2: #0284c7;
-            --light: #ffffff;
-            --surface: rgba(255, 255, 255, 0.95);
-            --surface-alt: rgba(248, 250, 252, 0.9);
-            --border: rgba(203, 213, 225, 0.4);
-            --text: #1f2937;
-            --text-muted: #6b7280;
-            --text-light: #9ca3af;
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -34,14 +15,13 @@
         body {
             font-family: 'Times New Roman', Times, serif;
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #f1f5f9 50%, #f8fafc 75%, #ffffff 100%);
-            color: var(--text);
+            color: #1f2937;
             overflow-x: hidden;
             scroll-behavior: smooth;
             line-height: 1.6;
-            min-height: 100vh;
         }
 
-        /* Advanced Background */
+        /* Background Effects */
         .bg-container {
             position: fixed;
             top: 0;
@@ -103,10 +83,10 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid rgba(203, 213, 225, 0.4);
             z-index: 1000;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow-light);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .nav {
@@ -121,7 +101,7 @@
         .logo {
             font-size: 2rem;
             font-weight: 900;
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -134,7 +114,7 @@
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: #6b7280;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -148,12 +128,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--text);
+            color: #1f2937;
         }
 
         .nav-links a:hover::after {
@@ -176,120 +156,15 @@
             z-index: 2;
         }
 
-        /* Profile Image Styles */
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 2rem auto;
-            position: relative;
-            animation: fadeInUp 1s ease 0.3s both;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--light);
-            box-shadow: var(--shadow);
-            transition: all 0.4s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, var(--accent2), var(--accent), var(--primary), var(--secondary));
-            border-radius: 50%;
-            z-index: 1;
-            animation: rotate 10s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .profile-image:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
-        }
-
-        /* About Section Profile */
-        .about-section-content {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 4rem;
-            align-items: start;
-            margin-top: 3rem;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 350px;
-            position: relative;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, var(--accent2), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .about-image:hover::before {
-            opacity: 0.1;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text {
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
-
         .hero-badge {
             display: inline-block;
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             padding: 1rem 2rem;
             border-radius: 50px;
             font-weight: 600;
-            color: var(--accent);
+            color: #0891b2;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s both;
         }
@@ -298,7 +173,7 @@
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 900;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -308,14 +183,14 @@
 
         .hero-subtitle {
             font-size: clamp(1.2rem, 3vw, 2rem);
-            color: var(--text-muted);
+            color: #6b7280;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.6s both;
         }
 
         .hero-description {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: #6b7280;
             margin-bottom: 3rem;
             line-height: 1.8;
             animation: fadeInUp 1s ease 0.8s both;
@@ -334,9 +209,9 @@
         }
 
         .achievement {
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             padding: 1rem 2rem;
             border-radius: 25px;
             transition: all 0.3s ease;
@@ -362,12 +237,12 @@
 
         .achievement:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .achievement-text {
             font-weight: 600;
-            color: var(--accent);
+            color: #0891b2;
             position: relative;
             z-index: 1;
         }
@@ -419,20 +294,20 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             color: white;
-            box-shadow: 0 15px 35px rgba(79, 172, 254, 0.3);
+            box-shadow: 0 15px 35px rgba(8, 145, 178, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--accent);
-            border: 2px solid var(--accent);
+            color: #0891b2;
+            border: 2px solid #0891b2;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 25px 45px rgba(79, 172, 254, 0.4);
+            box-shadow: 0 25px 45px rgba(8, 145, 178, 0.4);
         }
 
         /* Sections */
@@ -449,13 +324,13 @@
 
         .section-badge {
             display: inline-block;
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             padding: 0.5rem 1.5rem;
             border-radius: 20px;
             font-weight: 600;
-            color: var(--accent);
+            color: #0891b2;
             margin-bottom: 1rem;
         }
 
@@ -463,7 +338,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -471,7 +346,7 @@
 
         .section-description {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: #6b7280;
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.8;
@@ -486,9 +361,9 @@
         }
 
         .skill-card {
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             border-radius: 30px;
             padding: 3rem;
             transition: all 0.4s ease;
@@ -503,14 +378,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .skill-card:hover::before {
@@ -529,13 +404,13 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: var(--text);
+            color: #1f2937;
             position: relative;
             z-index: 1;
         }
 
         .skill-description {
-            color: var(--text-muted);
+            color: #6b7280;
             line-height: 1.7;
             margin-bottom: 2rem;
             position: relative;
@@ -578,7 +453,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, var(--accent2), var(--accent));
+            background: linear-gradient(180deg, #0284c7, #0891b2);
             transform: translateX(-50%);
             border-radius: 2px;
         }
@@ -592,9 +467,9 @@
 
         .timeline-content {
             width: 45%;
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             border-radius: 25px;
             padding: 3rem;
             transition: all 0.4s ease;
@@ -619,14 +494,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .timeline-content:hover {
             transform: scale(1.05);
-            box-shadow: var(--shadow);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .timeline-content:hover::before {
@@ -638,25 +513,25 @@
             left: 50%;
             width: 30px;
             height: 30px;
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             border-radius: 50%;
             transform: translateX(-50%);
             z-index: 2;
-            border: 4px solid var(--dark);
-            box-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 20px rgba(8, 145, 178, 0.5);
         }
 
         .job-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent);
+            color: #0891b2;
             margin-bottom: 0.5rem;
             position: relative;
             z-index: 1;
         }
 
         .company-date {
-            color: var(--text-muted);
+            color: #6b7280;
             font-weight: 600;
             margin-bottom: 1.5rem;
             position: relative;
@@ -664,7 +539,7 @@
         }
 
         .job-description {
-            color: var(--text-muted);
+            color: #6b7280;
             line-height: 1.7;
             position: relative;
             z-index: 1;
@@ -679,9 +554,9 @@
         }
 
         .education-card {
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             border-radius: 30px;
             padding: 3rem;
             transition: all 0.4s ease;
@@ -703,7 +578,7 @@
 
         .education-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .education-card:hover::before {
@@ -713,14 +588,14 @@
         .degree-title {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--accent);
+            color: #0891b2;
             margin-bottom: 1rem;
             position: relative;
             z-index: 1;
         }
 
         .school-name {
-            color: var(--text);
+            color: #1f2937;
             font-weight: 600;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
@@ -729,21 +604,21 @@
         }
 
         .graduation-date {
-            color: var(--text-muted);
+            color: #6b7280;
             margin-bottom: 2rem;
             position: relative;
             z-index: 1;
         }
 
         .education-details {
-            color: var(--text-muted);
+            color: #6b7280;
             line-height: 1.7;
             position: relative;
             z-index: 1;
         }
 
         .achievement-highlight {
-            color: var(--accent);
+            color: #0891b2;
             font-weight: 600;
         }
 
@@ -756,9 +631,9 @@
         }
 
         .contact-card {
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
+            border: 1px solid rgba(203, 213, 225, 0.4);
             border-radius: 25px;
             padding: 3rem;
             text-align: center;
@@ -774,14 +649,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .contact-card:hover::before {
@@ -791,7 +666,7 @@
         .contact-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: var(--accent);
+            color: #0891b2;
             position: relative;
             z-index: 1;
         }
@@ -800,13 +675,13 @@
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: var(--text);
+            color: #1f2937;
             position: relative;
             z-index: 1;
         }
 
         .contact-link {
-            color: var(--text-muted);
+            color: #6b7280;
             text-decoration: none;
             transition: color 0.3s ease;
             position: relative;
@@ -814,7 +689,7 @@
         }
 
         .contact-link:hover {
-            color: var(--accent);
+            color: #0891b2;
         }
 
         /* Scroll Progress */
@@ -830,7 +705,7 @@
 
         .scroll-progress-bar {
             height: 100%;
-            background: linear-gradient(45deg, var(--accent2), var(--accent));
+            background: linear-gradient(45deg, #0284c7, #0891b2);
             width: 0%;
             transition: width 0.1s ease;
         }
@@ -893,23 +768,6 @@
                 flex-direction: column;
                 align-items: center;
             }
-
-            .profile-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .about-section-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .about-image {
-                height: 300px;
-                max-width: 250px;
-                margin: 0 auto;
-            }
         }
     </style>
 </head>
@@ -946,14 +804,11 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="profile-image">
-                <img src="profile1.jpg" alt="Rimsha Mahboob - Professional Photo">
-            </div>
             <div class="hero-badge">✨ IT Professional & Student</div>
             <h1 class="hero-title">Rimsha Mahboob</h1>
             <p class="hero-subtitle">Information Technology Student & Data Analytics Enthusiast</p>
             <p class="hero-description">
-                Hi! I'm Rimsha, a passionate Information Technology student at Florida State University with a deep fascination for data analytics and problem-solving. My journey in technology began during my time as a STEM tutor, where I discovered my love for helping others understand complex concepts. Currently, I work as a Records Operation Specialist with the Florida Department of Highway Safety and Motor Vehicles, where I've honed my skills in data management and digital systems. As someone who speaks English, Urdu, Hindi, and Punjabi, I bring a unique multicultural perspective to technology solutions. I'm excited about leveraging my programming skills in Python, Java, C++, and C# to create meaningful innovations in the data analytics field. My goal is to bridge the gap between complex technical concepts and real-world applications that make a difference in people's lives.
+                Hi! I'm an Information Technology student at Florida State University with a special interest in data analytics and programming. As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to technology solutions and am passionate about using my skills to create meaningful innovations in the tech industry.
             </p>
             
             <div class="achievements">
@@ -991,18 +846,13 @@
                 I am a dedicated Information Technology student at Florida State University with a passion for technology and education.
             </p>
         </div>
-        <div class="about-section-content">
-            <div class="about-image">
-                <img src="profile2.jpg" alt="Rimsha Mahboob - About Photo">
-            </div>
-            <div class="about-text">
-                <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
-                    My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and a commitment to helping others succeed. I bring a unique perspective to technology through my diverse background in both technical and educational fields.
-                </p>
-                <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-muted);">
-                    As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing to grow in the field of data analytics and information systems.
-                </p>
-            </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280; margin-bottom: 2rem;">
+                My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and a commitment to helping others succeed. I bring a unique perspective to technology through my diverse background in both technical and educational fields.
+            </p>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280;">
+                As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing to grow in the field of data analytics and information systems.
+            </p>
         </div>
     </section>
 
@@ -1129,7 +979,7 @@
             <div class="education-card">
                 <h3 class="degree-title">Bachelor of Science</h3>
                 <p class="school-name">Florida State University</p>
-                <p class="graduation-date">Expected: December 2025</p>
+                <p class="graduation-date">Expected: May 2026</p>
                 <div class="education-details">
                     Major in Information Technology<br>
                     Minor in Data Analytics<br>
@@ -1231,20 +1081,17 @@
         // Header scroll effect
         function setupHeaderEffect() {
             const header = document.querySelector('.header');
-            let lastScrollTop = 0;
-
+            
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset;
                 
                 if (scrollTop > 100) {
-                    header.style.background = 'rgba(10, 10, 10, 0.98)';
-                    header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
                 } else {
-                    header.style.background = 'rgba(10, 10, 10, 0.95)';
-                    header.style.boxShadow = 'none';
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)';
                 }
-                
-                lastScrollTop = scrollTop;
             });
         }
 
@@ -1261,63 +1108,16 @@
             });
         }
 
-        // Parallax effect for floating orbs
-        function setupParallax() {
-            const orbs = document.querySelectorAll('.orb');
-            
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const rate = scrolled * -0.5;
-                
-                orbs.forEach((orb, index) => {
-                    const speed = (index + 1) * 0.3;
-                    orb.style.transform = `translate3d(0, ${rate * speed}px, 0)`;
-                });
-            });
-        }
-
-        // Enhanced hover effects for cards
-        function setupCardEffects() {
-            const cards = document.querySelectorAll('.skill-card, .education-card, .contact-card, .timeline-content');
-            
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    
-                    card.style.setProperty('--mouse-x', x + 'px');
-                    card.style.setProperty('--mouse-y', y + 'px');
-                });
-            });
-        }
-
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             setupSmoothScrolling();
             setupScrollAnimations();
             setupHeaderEffect();
             setupButtonEffects();
-            setupParallax();
-            setupCardEffects();
         });
 
         // Update scroll progress on scroll
         window.addEventListener('scroll', updateScrollProgress);
-
-        // Performance optimization: throttle scroll events
-        let ticking = false;
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    updateScrollProgress();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }
-
-        window.addEventListener('scroll', requestTick);
     </script>
 </body>
 </html>
