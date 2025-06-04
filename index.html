@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+.profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .about-section-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .about-image {
+                height: 300px;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+
+            .about-text {
+                text-align: left;
+            }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -154,6 +173,111 @@
         .hero-content {
             max-width: 900px;
             z-index: 2;
+        }
+
+        /* Profile Image Styles */
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem auto;
+            position: relative;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #0284c7, #0891b2, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            z-index: 1;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-image:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
+        }
+
+        /* About Section Profile */
+        .about-section-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 350px;
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #0284c7, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .about-image:hover::before {
+            opacity: 0.1;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
         }
 
         .hero-badge {
@@ -804,6 +928,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <div class="profile-image">
+                <img src="profile1.jpg" alt="Rimsha Mahboob - Professional Photo">
+            </div>
             <div class="hero-badge">✨ IT Professional & Student</div>
             <h1 class="hero-title">Rimsha Mahboob</h1>
             <p class="hero-subtitle">Information Technology Student & Data Analytics Enthusiast</p>
@@ -846,13 +973,18 @@
                 I am a dedicated Information Technology student at Florida State University with a passion for technology and education.
             </p>
         </div>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280; margin-bottom: 2rem;">
-                My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and a commitment to helping others succeed. I bring a unique perspective to technology through my diverse background in both technical and educational fields.
-            </p>
-            <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280;">
-                As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing to grow in the field of data analytics and information systems.
-            </p>
+        <div class="about-section-content">
+            <div class="about-image">
+                <img src="profile2.jpg" alt="Rimsha Mahboob - About Photo">
+            </div>
+            <div class="about-text">
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280; margin-bottom: 2rem;">
+                    My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and a commitment to helping others succeed. I bring a unique perspective to technology through my diverse background in both technical and educational fields.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280;">
+                    As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing to grow in the field of data analytics and information systems.
+                </p>
+            </div>
         </div>
     </section>
 
