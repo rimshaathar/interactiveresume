@@ -1,23 +1,4 @@
-.profile-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .about-section-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .about-image {
-                height: 300px;
-                max-width: 250px;
-                margin: 0 auto;
-            }
-
-            .about-text {
-                text-align: left;
-            }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -669,6 +650,31 @@
             z-index: 1;
         }
 
+        /* Bullet points for job descriptions */
+        .job-duties {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job-duties li {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .job-duties li::before {
+            content: '•';
+            color: #0891b2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
         /* Education Cards */
         .education-grid {
             display: grid;
@@ -892,6 +898,27 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .about-section-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .about-image {
+                height: 300px;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+
+            .about-text {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -1057,9 +1084,12 @@
                 <div class="timeline-content">
                     <h3 class="job-title">Records Operation Specialist</h3>
                     <p class="company-date">Florida Department of Highway Safety and Motor Vehicles • July 2024 - Current</p>
-                    <p class="job-description">
-                        Manage high-volume title document processing and imaging operations with precise attention to detail. Convert and organize physical documents to electronic format using scanning technology and Microsoft Office Suite. Research and respond to title document requests using manual and automated systems while maintaining digital filing systems.
-                    </p>
+                    <ul class="job-duties">
+                        <li>Manage high-volume title document processing and imaging operations with precise attention to detail</li>
+                        <li>Convert and organize physical documents to electronic format using scanning technology and Microsoft Office Suite</li>
+                        <li>Research and respond to title document requests using manual and automated systems</li>
+                        <li>Maintain digital filing systems while ensuring data accuracy and completeness</li>
+                    </ul>
                 </div>
             </div>
             
@@ -1068,9 +1098,11 @@
                 <div class="timeline-content">
                     <h3 class="job-title">Cosmetology License</h3>
                     <p class="company-date">Aveda Institute Florida • February 2023 - January 2024</p>
-                    <p class="job-description">
-                        Acquired hands-on experience in various cosmetology services and learned industry-standard practices and safety protocols. Obtained cosmetology license, demonstrating proficiency and knowledge in professional beauty practices. Completed comprehensive training in cosmetology, including hair, skin, and nail care techniques.
-                    </p>
+                    <ul class="job-duties">
+                        <li>Acquired hands-on experience in various cosmetology services and learned industry-standard practices and safety protocols</li>
+                        <li>Obtained cosmetology license, demonstrating proficiency and knowledge in professional beauty practices</li>
+                        <li>Completed comprehensive training in cosmetology, including hair, skin, and nail care techniques</li>
+                    </ul>
                 </div>
             </div>
             
@@ -1079,9 +1111,11 @@
                 <div class="timeline-content">
                     <h3 class="job-title">College Mentor</h3>
                     <p class="company-date">Verizon Enterprise - Youth Program • May 2022 - August 2022</p>
-                    <p class="job-description">
-                        Conducted coding workshops and hands-on activities to introduce middle school students to programming and STEM concepts. Provided career guidance and academic planning support, helping students align their education with future technology careers. Facilitated networking opportunities with industry professionals and offered personal development advice.
-                    </p>
+                    <ul class="job-duties">
+                        <li>Conducted coding workshops and hands-on activities to introduce middle school students to programming and STEM concepts</li>
+                        <li>Provided career guidance and academic planning support, helping students align their education with future technology careers</li>
+                        <li>Facilitated networking opportunities with industry professionals and offered personal development advice, including teamwork and communication skills</li>
+                    </ul>
                 </div>
             </div>
             
@@ -1090,9 +1124,11 @@
                 <div class="timeline-content">
                     <h3 class="job-title">STEM Tutor</h3>
                     <p class="company-date">Learning Commons - Tallahassee State College • January 2021 - May 2022</p>
-                    <p class="job-description">
-                        Tutored students in Chemistry I & II, Calculus, College Algebra, and Physics through both in-person and online sessions. Utilized digital tools such as GoBoard and Zoom to facilitate remote tutoring and enhance the learning experience. Developed customized lesson plans and study materials to address individual student needs.
-                    </p>
+                    <ul class="job-duties">
+                        <li>Tutored students in Chemistry I & II, Calculus, College Algebra, and Physics through both in-person and online sessions</li>
+                        <li>Utilized digital tools such as GoBoard and Zoom to facilitate remote tutoring and enhance the learning experience</li>
+                        <li>Developed customized lesson plans and study materials to address individual student needs</li>
+                    </ul>
                 </div>
             </div>
         </div>
