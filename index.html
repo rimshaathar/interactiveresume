@@ -140,6 +140,29 @@
             width: 100%;
         }
 
+        /* Special Portfolio Button in Nav */
+        .portfolio-nav-btn {
+            background: linear-gradient(45deg, #f093fb, #f5576c) !important;
+            color: white !important;
+            padding: 0.8rem 1.5rem !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        .portfolio-nav-btn:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 20px rgba(240, 147, 251, 0.4) !important;
+            color: white !important;
+        }
+
+        .portfolio-nav-btn::after {
+            display: none !important;
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -410,9 +433,44 @@
             border: 2px solid #0891b2;
         }
 
+        /* Special Portfolio Button */
+        .btn-portfolio {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-portfolio::before {
+            content: '🚀';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-portfolio:hover::before {
+            left: 10px;
+        }
+
+        .btn-portfolio span {
+            transition: all 0.3s ease;
+        }
+
+        .btn-portfolio:hover span {
+            margin-left: 30px;
+        }
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 25px 45px rgba(8, 145, 178, 0.4);
+        }
+
+        .btn-portfolio:hover {
+            box-shadow: 0 25px 45px rgba(240, 147, 251, 0.4);
         }
 
         /* Sections */
@@ -951,6 +1009,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="https://rimshaathar.github.io/career-portfolio/" target="_blank" class="portfolio-nav-btn">🚀 Portfolio</a></li>
             </ul>
         </nav>
     </header>
@@ -988,6 +1047,9 @@
             </div>
             
             <div class="cta-buttons">
+                <a href="https://rimshaathar.github.io/career-portfolio/" target="_blank" class="btn btn-portfolio">
+                    <span>View My Projects</span>
+                </a>
                 <a href="#contact" class="btn btn-primary">Get In Touch</a>
                 <a href="mailto:rimsha.athar1@gmail.com" class="btn btn-secondary">Email Me</a>
             </div>
@@ -1212,7 +1274,7 @@
 
         // Smooth scrolling for navigation links
         function setupSmoothScrolling() {
-            const navLinks = document.querySelectorAll('.nav-links a');
+            const navLinks = document.querySelectorAll('.nav-links a:not(.portfolio-nav-btn)');
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
