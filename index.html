@@ -15,7 +15,7 @@
         body {
             font-family: 'Times New Roman', Times, serif;
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #f1f5f9 50%, #f8fafc 75%, #ffffff 100%);
-            color: #1f2937;
+            color: #242424;
             overflow-x: hidden;
             scroll-behavior: smooth;
             line-height: 1.6;
@@ -42,7 +42,7 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.05));
+            background: linear-gradient(45deg, rgba(31, 69, 57, 0.1), rgba(92, 124, 137, 0.05));
             opacity: 0.6;
             animation: float 20s ease-in-out infinite;
             filter: blur(40px);
@@ -59,16 +59,7 @@
         }
 
         .grid-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
-            background-size: 60px 60px;
-            animation: gridMove 30s linear infinite;
+            display: none;
         }
 
         @keyframes gridMove {
@@ -101,7 +92,7 @@
         .logo {
             font-size: 2rem;
             font-weight: 900;
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -114,7 +105,7 @@
         }
 
         .nav-links a {
-            color: #6b7280;
+            color: #5C7C89;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -128,12 +119,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #1f2937;
+            color: #242424;
         }
 
         .nav-links a:hover::after {
@@ -142,7 +133,7 @@
 
         /* Special Portfolio Button in Nav */
         .portfolio-nav-btn {
-            background: linear-gradient(45deg, #f093fb, #f5576c) !important;
+            background: linear-gradient(45deg, #1F4539, #5C7C89) !important;
             color: white !important;
             padding: 0.8rem 1.5rem !important;
             border-radius: 25px !important;
@@ -155,7 +146,7 @@
 
         .portfolio-nav-btn:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 10px 20px rgba(240, 147, 251, 0.4) !important;
+            box-shadow: 0 10px 20px rgba(31, 69, 57, 0.4) !important;
             color: white !important;
         }
 
@@ -181,8 +172,8 @@
 
         /* Profile Image Styles */
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 280px;
+            height: 280px;
             margin: 0 auto 2rem auto;
             position: relative;
             animation: fadeInUp 1s ease 0.3s both;
@@ -207,7 +198,7 @@
             left: -10px;
             right: -10px;
             bottom: -10px;
-            background: linear-gradient(45deg, #0284c7, #0891b2, #3b82f6, #1d4ed8);
+            background: linear-gradient(45deg, #1F4539, #5C7C89, #1F4539, #5C7C89);
             border-radius: 50%;
             z-index: 1;
             animation: rotate 10s linear infinite;
@@ -220,15 +211,15 @@
 
         .profile-image:hover img {
             transform: scale(1.05);
-            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 25px 50px rgba(31, 69, 57, 0.2);
         }
 
         /* About Section Profile */
         .about-section-content {
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 4rem;
-            align-items: start;
+            grid-template-columns: 350px 1fr;
+            gap: 5rem;
+            align-items: center;
             margin-top: 3rem;
         }
 
@@ -255,7 +246,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, #0284c7, transparent);
+            background: linear-gradient(45deg, #1F4539, transparent);
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 1;
@@ -288,11 +279,11 @@
             display: inline-block;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             padding: 1rem 2rem;
             border-radius: 50px;
             font-weight: 600;
-            color: #0891b2;
+            color: #1F4539;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s both;
         }
@@ -301,7 +292,7 @@
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 900;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1F4539, #5C7C89);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -311,14 +302,14 @@
 
         .hero-subtitle {
             font-size: clamp(1.2rem, 3vw, 2rem);
-            color: #6b7280;
+            color: #5C7C89;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.6s both;
         }
 
         .hero-description {
             font-size: 1.2rem;
-            color: #6b7280;
+            color: #5C7C89;
             margin-bottom: 3rem;
             line-height: 1.8;
             animation: fadeInUp 1s ease 0.8s both;
@@ -339,7 +330,7 @@
         .achievement {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             padding: 1rem 2rem;
             border-radius: 25px;
             transition: all 0.3s ease;
@@ -370,7 +361,7 @@
 
         .achievement-text {
             font-weight: 600;
-            color: #0891b2;
+            color: #1F4539;
             position: relative;
             z-index: 1;
         }
@@ -385,7 +376,7 @@
         }
 
         .language {
-            background: linear-gradient(45deg, #f093fb, #f5576c);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 20px;
@@ -395,7 +386,7 @@
 
         .language:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
+            box-shadow: 0 10px 25px rgba(31, 69, 57, 0.3);
         }
 
         .cta-buttons {
@@ -422,22 +413,22 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             color: white;
-            box-shadow: 0 15px 35px rgba(8, 145, 178, 0.3);
+            box-shadow: 0 15px 35px rgba(31, 69, 57, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #0891b2;
-            border: 2px solid #0891b2;
+            color: #1F4539;
+            border: 2px solid #1F4539;
         }
 
         /* Special Portfolio Button */
         .btn-portfolio {
-            background: linear-gradient(45deg, #f093fb, #f5576c);
+            background: linear-gradient(45deg, #5C7C89, #1F4539);
             color: white;
-            box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3);
+            box-shadow: 0 15px 35px rgba(92, 124, 137, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -466,11 +457,11 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 25px 45px rgba(8, 145, 178, 0.4);
+            box-shadow: 0 25px 45px rgba(31, 69, 57, 0.4);
         }
 
         .btn-portfolio:hover {
-            box-shadow: 0 25px 45px rgba(240, 147, 251, 0.4);
+            box-shadow: 0 25px 45px rgba(92, 124, 137, 0.4);
         }
 
         /* Sections */
@@ -489,11 +480,11 @@
             display: inline-block;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             padding: 0.5rem 1.5rem;
             border-radius: 20px;
             font-weight: 600;
-            color: #0891b2;
+            color: #1F4539;
             margin-bottom: 1rem;
         }
 
@@ -501,7 +492,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1F4539, #5C7C89);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -509,7 +500,7 @@
 
         .section-description {
             font-size: 1.2rem;
-            color: #6b7280;
+            color: #5C7C89;
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.8;
@@ -526,7 +517,7 @@
         .skill-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             border-radius: 30px;
             padding: 3rem;
             transition: all 0.4s ease;
@@ -541,7 +532,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -567,13 +558,13 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #1f2937;
+            color: #242424;
             position: relative;
             z-index: 1;
         }
 
         .skill-description {
-            color: #6b7280;
+            color: #5C7C89;
             line-height: 1.7;
             margin-bottom: 2rem;
             position: relative;
@@ -589,7 +580,7 @@
         }
 
         .tech-tag {
-            background: linear-gradient(45deg, #f093fb, #f5576c);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             color: white;
             padding: 0.5rem 1.2rem;
             border-radius: 20px;
@@ -600,7 +591,7 @@
 
         .tech-tag:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+            box-shadow: 0 5px 15px rgba(31, 69, 57, 0.3);
         }
 
         /* Timeline */
@@ -616,7 +607,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, #0284c7, #0891b2);
+            background: linear-gradient(180deg, #1F4539, #5C7C89);
             transform: translateX(-50%);
             border-radius: 2px;
         }
@@ -632,7 +623,7 @@
             width: 45%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             border-radius: 25px;
             padding: 3rem;
             transition: all 0.4s ease;
@@ -642,12 +633,10 @@
 
         .timeline-item:nth-child(odd) .timeline-content {
             margin-right: auto;
-            text-align: right;
         }
 
         .timeline-item:nth-child(even) .timeline-content {
             margin-left: auto;
-            text-align: left;
         }
 
         .timeline-content::before {
@@ -657,7 +646,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1F4539, #5C7C89);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -676,25 +665,25 @@
             left: 50%;
             width: 30px;
             height: 30px;
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             border-radius: 50%;
             transform: translateX(-50%);
             z-index: 2;
             border: 4px solid #ffffff;
-            box-shadow: 0 0 20px rgba(8, 145, 178, 0.5);
+            box-shadow: 0 0 20px rgba(31, 69, 57, 0.5);
         }
 
         .job-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #0891b2;
+            color: #1F4539;
             margin-bottom: 0.5rem;
             position: relative;
             z-index: 1;
         }
 
         .company-date {
-            color: #6b7280;
+            color: #5C7C89;
             font-weight: 600;
             margin-bottom: 1.5rem;
             position: relative;
@@ -702,7 +691,7 @@
         }
 
         .job-description {
-            color: #6b7280;
+            color: #5C7C89;
             line-height: 1.7;
             position: relative;
             z-index: 1;
@@ -715,21 +704,19 @@
             margin: 0;
             position: relative;
             z-index: 1;
-            text-align: left;
         }
 
         .job-duties li {
-            color: #6b7280;
+            color: #5C7C89;
             line-height: 1.7;
             margin-bottom: 0.8rem;
             padding-left: 1.5rem;
             position: relative;
-            text-align: left;
         }
 
         .job-duties li::before {
             content: '•';
-            color: #0891b2;
+            color: #1F4539;
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -747,7 +734,7 @@
         .education-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             border-radius: 30px;
             padding: 3rem;
             transition: all 0.4s ease;
@@ -762,7 +749,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #f093fb, #f5576c);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -779,14 +766,14 @@
         .degree-title {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #0891b2;
+            color: #1F4539;
             margin-bottom: 1rem;
             position: relative;
             z-index: 1;
         }
 
         .school-name {
-            color: #1f2937;
+            color: #242424;
             font-weight: 600;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
@@ -795,21 +782,21 @@
         }
 
         .graduation-date {
-            color: #6b7280;
+            color: #5C7C89;
             margin-bottom: 2rem;
             position: relative;
             z-index: 1;
         }
 
         .education-details {
-            color: #6b7280;
+            color: #5C7C89;
             line-height: 1.7;
             position: relative;
             z-index: 1;
         }
 
         .achievement-highlight {
-            color: #0891b2;
+            color: #1F4539;
             font-weight: 600;
         }
 
@@ -824,7 +811,7 @@
         .contact-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(203, 213, 225, 0.4);
+            border: 1px solid rgba(92, 124, 137, 0.4);
             border-radius: 25px;
             padding: 3rem;
             text-align: center;
@@ -840,7 +827,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -857,7 +844,7 @@
         .contact-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: #0891b2;
+            color: #1F4539;
             position: relative;
             z-index: 1;
         }
@@ -866,13 +853,13 @@
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #1f2937;
+            color: #242424;
             position: relative;
             z-index: 1;
         }
 
         .contact-link {
-            color: #6b7280;
+            color: #5C7C89;
             text-decoration: none;
             transition: color 0.3s ease;
             position: relative;
@@ -880,7 +867,7 @@
         }
 
         .contact-link:hover {
-            color: #0891b2;
+            color: #1F4539;
         }
 
         /* Scroll Progress */
@@ -896,7 +883,7 @@
 
         .scroll-progress-bar {
             height: 100%;
-            background: linear-gradient(45deg, #0284c7, #0891b2);
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
             width: 0%;
             transition: width 0.1s ease;
         }
@@ -939,7 +926,6 @@
             .timeline-content {
                 width: calc(100% - 80px);
                 margin-left: 80px !important;
-                text-align: left !important;
             }
             
             .timeline-dot {
@@ -961,8 +947,8 @@
             }
 
             .profile-image {
-                width: 150px;
-                height: 150px;
+                width: 200px;
+                height: 200px;
             }
 
             .about-section-content {
@@ -1252,6 +1238,12 @@
                 <div class="contact-icon">📱</div>
                 <h3 class="contact-title">Phone</h3>
                 <a href="tel:+14482159715" class="contact-link">(448) 215-9715</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">💼</div>
+                <h3 class="contact-title">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/rimsha-m-928778203/" target="_blank" class="contact-link">Connect with me</a>
             </div>
             
             <div class="contact-card">
